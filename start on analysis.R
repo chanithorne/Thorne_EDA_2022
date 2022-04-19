@@ -1,16 +1,16 @@
-library(BiodiversityR)
 library(tidyverse)
 library(googlesheets4)
+gs4_deauth()
 
-NP_Species <- read_sheet("https://docs.google.com/spreadsheets/d/1hfK3ptAkMU4AiM5PknHe4IebFl29wEWNdMKpc5nEC4M/edit#gid=0")
-NP_Species
+NP_Species_20 <- read_sheet("https://docs.google.com/spreadsheets/d/1hfK3ptAkMU4AiM5PknHe4IebFl29wEWNdMKpc5nEC4M/edit#gid=0")
+NP_Species_20
 
-Houston_Species <- read_sheet("1-VpDe1FBQKK1nWYI_HOV8qVGD1fSHKUoe65E11iqOEU")
+Houston_Species_20 <- read_sheet("1-VpDe1FBQKK1nWYI_HOV8qVGD1fSHKUoe65E11iqOEU")
 
 data <-
   bind_rows(
-    NP_Species, 
-    Houston_Species
+    NP_Species_20, 
+    Houston_Species_20
   ) %>% 
   mutate(
     plot = factor(plot)
