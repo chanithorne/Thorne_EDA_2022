@@ -62,3 +62,6 @@ data %>%
   ggplot() +
   geom_jitter(mapping = aes(x = site, y = n_spp, color = treatment),
               size=2)
+
+ggplot(data = NP_Species_20) +
+  geom_histogram(mapping = aes(x = cover), binwidth = 1)
