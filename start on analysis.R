@@ -64,4 +64,8 @@ data %>%
               size=2)
 
 ggplot(data = NP_Species_20) +
-  geom_histogram(mapping = aes(x = cover), binwidth = 1)
+  geom_histogram(mapping = aes(x = cover, fill = taxa), binwidth = 1)
+
+ggplot(data = NP_Species_20) +
+  geom_histogram(mapping = aes(x = cover), binwidth = 1) +
+  facet_wrap(~ taxa)

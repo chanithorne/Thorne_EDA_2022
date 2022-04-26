@@ -50,6 +50,11 @@ data %>%
   geom_col (size = 3) + (mapping = aes(x = plot, y = n_spp, fill = treatment)) +
   facet_wrap(~ site)
 
+ggplot(data = NP_Species_18) +
+  geom_histogram(mapping = aes(x = cover, fill = taxa), binwidth = 1)
+
+
+
 ggsave("SAC.png",
        height = 8,
        width = 12,
