@@ -61,14 +61,52 @@ data %>%
               size=2)
 
 ggplot(data = data) +
-  geom_histogram(mapping = aes(x = cover, fill = status), binwidth = 1)
+  geom_histogram(mapping = aes(x = cover, fill = status), binwidth = 5)
 
-ggplot(data = data) +
-  geom_col(mapping = aes(x = plot, y = n_spp)) +
-  facet_wrap(~ status)
 
 #Save Histogram Image
 ggsave("Rplot.png",
+       height = 8,
+       width = 12,
+       units = "in",
+       dpi = 400)
+
+#Data Analysis
+
+data_grouped <- group_by(data, status)
+data_grouped
+
+data_summary <-
+  summarize(
+    data_grouped, 
+    mean_count = mean(cover, na.rm = TRUE),
+    sem = sd(cover, na.rm = TRUE) / sqrt(n()),
+    ci_upper_limit = mean_count + 1.96 * sem,
+    ci_lower_limit = mean_count - 1.96 * sem
+  )
+data_summary
+
+ggplot(data = data) +
+  geom_jitter(mapping = aes(x = status, y = cover), alpha = .1,
+              shape= 16, size= 2) +
+  geom_linerange(
+    data = data_summary, 
+    mapping = aes(x = status, y = mean_count, ymax = ci_upper_limit, 
+                  ymin = ci_lower_limit),
+    color = "red", size= 2
+  )+ 
+  geom_point(
+    data = data_summary, 
+    mapping = aes(x = status, y = mean_count),
+    color = "red", size= 4
+  )+ 
+  scale_y_log10()+
+  labs(
+    x= NULL,
+    y= "Cover (%)"
+  )
+
+ggsave("RAnalysis.png",
        height = 8,
        width = 12,
        units = "in",
