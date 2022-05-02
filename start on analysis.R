@@ -46,10 +46,6 @@ filter(
 np_species_div <- data(taxa, plot)
 np_species_div
 
-#Save for NUTNET
-
-ggplot(data = NP_Species) +
-  geom_col(mapping = aes(x = treatment, y = cover))
 
 #FOR POSTER
 data %>% 

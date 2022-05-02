@@ -5,8 +5,6 @@ library(readr)
 gs4_deauth()
 
 NP_Species_21 <- read_sheet("https://docs.google.com/spreadsheets/d/1hfK3ptAkMU4AiM5PknHe4IebFl29wEWNdMKpc5nEC4M/edit#gid=0")
-NP_Species_21
-
 Houston_Species_21 <- read_sheet("1-VpDe1FBQKK1nWYI_HOV8qVGD1fSHKUoe65E11iqOEU")
 
 #Read In Native/ Non-native Data
@@ -105,6 +103,8 @@ ggplot(data = data) +
     x= NULL,
     y= "Cover (%)"
   )
+
+
 
 ggsave("RAnalysis.png",
        height = 8,
