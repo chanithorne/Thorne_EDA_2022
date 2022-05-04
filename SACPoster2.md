@@ -79,21 +79,8 @@ species counts in a given plot from data collected in 2021.
 Fig. 4. Mean cover of native and non-native plant species and 95%
 confidence interval of data collection.
 
-Our results (Fig. 1) show a greater consistency between control plots
-than seen in N,P,K plots. At North Pond, the plot with the greatest
-species richness was control plot 9, which had a total of 14 species in
-the 1 meter square sampling area. Some of the plots with the least
-amount of species richness were plots with all three NPK treatments
-applied. These plots contained 5 different species- with roughly 50%
-consisting of invasive species. However, at Houston, there were 7 plots
-with the same species richness of 5 species in the 1 meter square
-sampling subplot. Three of these plots contained only native species,
-and the other four only contained a single invasive species. This
-suggests that control plots, even when they contain a lower species
-richness, have a lower presence of invasive species than NPK plots. This
-supports the study mentioned in the abstract- that anthropogenic
-influences on the environment increase the growth of invasive species
-(Macdougall et al. 2014).
+Our results (Fig. 1, Fig. 2) show a greater consistency between control plots than seen in N,P,K plots. This suggests that control plots, even when they contain a lower species richness, have a lower presence of invasive species than NPK plots. This supports the study mentioned in the abstract- that anthropogenic influences on the environment increase the growth of invasive species (Macdougall et al. 2014).In Figure 3 we see that there is a greater number of native species throughout he NP and Houston sites which have small percent cover rates among most plots. This suggests that native species have lower density and are spread out among plots more. We can see a similar trend with the non-native spices as well. We can also determine that, on average, native species have a slightly higher percent cover than non-native species, and that the native species are more consistently dispersed than non-natives are across plots (Fig. 4).
+
 
 ## Discussion
 
